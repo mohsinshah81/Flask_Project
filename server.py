@@ -8,8 +8,7 @@ def sent_analyzer():
     text_to_analyze = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyze)
     emotions = response['emotions']
-    dominant_emotion = response['dominant_emotion']    
-    
+    dominant_emotion = response['dominant_emotion']
     if emotions is None:
         return "Invalid input! Try again."
     else:
@@ -22,5 +21,5 @@ def render_index_page():
 
 # Run the Flask app
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
     #app.run(host="0.0.0.0", port=5000)
